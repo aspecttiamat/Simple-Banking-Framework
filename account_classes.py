@@ -42,7 +42,7 @@ class BankAccount:
         self.balance = balance
 
     def deposit(self, amt):
-        # Simple Deposit method.
+        # Simple Deposit method. Need to figure out how to build in functionality.
 
         self.balance += amt
 
