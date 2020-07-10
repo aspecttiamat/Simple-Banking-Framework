@@ -33,6 +33,9 @@ class BankAccount(models.Model):
     account_type = models.CharField(max_length=20, choices=AccountType.choices, default=AccountType.SIMPLECHECKING)
     account_balance = models.DecimalField("Balance", max_digits=1000000000, decimal_places=2, default=0.00)
 
+    def __str__(self):
+        return 'Bank Account: {}'.format(self.user_account.name)
+
     def deposit(self, amt):
         # Self explanatory, a method to deposit into the account.
         self.account_balance += amt
