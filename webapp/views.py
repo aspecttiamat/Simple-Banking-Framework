@@ -3,10 +3,10 @@ from django.http import HttpResponse, Http404
 from .models import UserAccount
 
 
-def index(request):
+def landing(request):
     users = UserAccount.objects.order_by('-id')
     context = {'users': users}
-    return render(request, 'webapp/index.html', context)
+    return render(request, 'webapp/landing.html', context)
 
 
 def user_info(request, user_id):
