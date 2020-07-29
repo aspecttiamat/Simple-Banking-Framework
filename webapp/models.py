@@ -5,7 +5,7 @@ from django.utils.translation import gettext_lazy as _
 class UserAccount(models.Model):
     """
     This class is the base model for the User's Account. All relevant information is stored in
-    objects of this class.
+    objects of this class. Lol
     """
     name = models.CharField("Name", max_length=50, default="")
     email = models.CharField(max_length=100, default="")
